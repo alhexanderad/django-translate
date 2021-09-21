@@ -1,3 +1,10 @@
 from django.shortcuts import render
 
-# Create your views here.
+from django.shortcuts import render
+from django.utils.translation import gettext as _
+
+def cars(resquest):
+  
+  color = _('orange')
+
+  return render(resquest, 'cars/car.html',{'color':color})

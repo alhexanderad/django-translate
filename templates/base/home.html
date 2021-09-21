@@ -3,8 +3,33 @@
 {% load i18n %}
 {% block content %}
 
-<h1>Hola</h1>
+<h1>{% trans "Let's translate this" %}</h1>
+  
+{% get_current_language as LANGUAGE_CODE  %}
+<h1>{{ LANGUAGE_CODE }}</h1>
 
-  {% trans "Let's translate this" %}
+<h1 style="color: brown;">{{ title }}</h1>
 
+<h3><a href=" {% url 'admin:index' %} ">{% url 'admin:index' %}</a></h3>
+
+<div class="" style="margin-left: 25px;">
+  <form action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}">
+    <select name="language">
+
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}"
+            {% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                {{ language.name_local }}
+            </option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Go">
+  </form>
+</div>
+
+<p><a href="{% url 'cars' %}">Car</a></p>
 {% endblock  %}

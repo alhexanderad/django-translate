@@ -1,0 +1,10 @@
+{% extends '../base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<p><a href="{% url 'home' %}">Home</a></p>
+<hr>
+  <h1>Hola cars</h1>
+  <h3>{{color}}</h3>
+{% endblock  %}
