@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 from django.utils.translation import gettext as _
 
-def cars(resquest):
+def car(resquest):
   
   color = _('orange')
 

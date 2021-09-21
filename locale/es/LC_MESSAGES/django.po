@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-21 05:37+0000\n"
+"POT-Creation-Date: 2021-09-21 15:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,9 +22,17 @@ msgstr ""
 msgid "Homepage"
 msgstr "Pagina Principal"
 
+#: cars/views.py:8
+msgid "orange"
+msgstr "anaranjado"
+
 #: core/urls.py:16
 msgid "admin/"
 msgstr "administracion/"
+
+#: core/urls.py:18
+msgid "cars/"
+msgstr "carros/"
 
 #: templates/base/home.html:6
 msgid "Let's translate this"

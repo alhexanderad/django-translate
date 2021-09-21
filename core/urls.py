@@ -16,5 +16,5 @@ urlpatterns += i18n_patterns(
     path (_('admin/'), admin.site.urls),
     path('', include('base.urls')),
     path(_('cars/'), include('cars.urls')),
-    prefix_default_language=False,
+    prefix_default_language=True,
 )
